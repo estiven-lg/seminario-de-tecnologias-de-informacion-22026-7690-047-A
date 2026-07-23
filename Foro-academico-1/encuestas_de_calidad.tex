@@ -1,0 +1,110 @@
+\documentclass[12pt, letterpaper]{article}
+
+% ===================== IDIOMA Y CODIFICACIÓN =====================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{csquotes}
+\spanishdecimal{.}
+
+% ===================== FUENTE =====================
+\usepackage{mathptmx}
+
+% ===================== MÁRGENES Y PÁGINA =====================
+\usepackage[letterpaper, margin=2.5cm]{geometry}
+
+% ===================== INTERLINEADO SENCILLO Y SIN SANGRÍA =====================
+\usepackage{setspace}
+\singlespacing
+\setlength{\parindent}{0pt}      % sin sangría al inicio de párrafo
+\setlength{\parskip}{0.5em}      % pequeño espacio entre párrafos (ajustable)
+
+% ===================== TEXTO JUSTIFICADO =====================
+% (justificado es el comportamiento por defecto en article, no se requiere paquete extra)
+
+% ===================== OTROS PAQUETES ÚTILES =====================
+\usepackage{graphicx}            % imágenes
+\usepackage{amsmath, amssymb}    % matemáticas
+\usepackage{hyperref}            % enlaces (URL del repositorio, referencias)
+\usepackage{titlesec}            % control de formato de subtítulos
+\usepackage[
+    style=apa,
+    backend=biber
+]{biblatex}
+\addbibresource{referencias.bib}
+
+% ===================== FORMATO DE SUBTÍTULOS =====================
+% Negrita, alineados a la izquierda, sin punto final, sin numeración automática
+\titleformat{\section}{\bfseries}{}{0pt}{}
+\titlespacing*{\section}{0pt}{1em}{0.3em} % espacio antes/después (evita más de 1 línea en blanco)
+
+\titleformat{\subsection}{\bfseries}{}{0pt}{}
+\titlespacing*{\subsection}{0pt}{0.8em}{0.2em}
+
+% ===================== CONFIGURACIÓN DE HYPERREF =====================
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=blue,
+    pdftitle={Diseño de encuestas efectivas para la obtención de datos de calidad},
+    pdfauthor={Estiven Joel Laferre Guevara}
+}
+
+\begin{document}
+
+% ===================== TÍTULO (sin \maketitle, formato manual según normas) =====================
+\begin{center}
+    {\bfseries\large Diseño de encuestas efectivas para la obtención de datos de calidad} \\[0.5em]
+    {\normalsize E.L Laferre Guevara} \\
+    {\normalsize 7690-22-2644 Universidad Mariano Gálvez} \\
+    {\normalsize Seminario de Tecnologías de la Información} \\
+    {\normalsize elaferre1@miumg.edu.gt}
+\end{center}
+
+\vspace{1em}
+
+% ===================== RESUMEN =====================
+\section*{Resumen}
+Escriba aquí el resumen en un único párrafo (150 a 250 palabras). Debe incluir el objetivo
+del trabajo, la metodología utilizada (cuando corresponda), los principales resultados
+obtenidos y las conclusiones alcanzadas. Se recomienda redactarlo al finalizar el artículo,
+ya que debe reflejar el trabajo desarrollado y no únicamente el tema investigado.
+
+% ===================== PALABRAS CLAVE =====================
+\noindent\textbf{Palabras clave:} palabra1, palabra2, palabra3, palabra4, palabra5.
+
+% ===================== DESARROLLO DEL TEMA =====================
+\section*{Desarrollo del tema}
+Desarrolle aquí un análisis crítico y fundamentado del tema asignado, apoyándose en
+bibliografía especializada y actualizada \parencite{ejemplo2024}. Recuerde que esta sección
+no debe limitarse a resumir el material proporcionado en clase, sino aportar una
+interpretación propia sustentada en fuentes académicas, con una extensión mínima
+aproximada de una página y media.
+
+\subsection*{Subtema (opcional)}
+Puede dividir el desarrollo en subsecciones si el tema lo requiere.
+
+% ===================== OBSERVACIONES Y COMENTARIOS =====================
+\section*{Observaciones y comentarios}
+Presente aquí observaciones personales derivadas del análisis realizado, discuta los
+resultados obtenidos, señale limitaciones, plantee posibles mejoras o sugiera líneas de
+investigación relacionadas con el tema. Esta sección no es una continuación del desarrollo,
+sino una reflexión crítica.
+
+% ===================== CONCLUSIONES =====================
+\section*{Conclusiones}
+\begin{enumerate}
+    \item Primera conclusión derivada del trabajo desarrollado.
+    \item Segunda conclusión derivada del trabajo desarrollado.
+    \item Tercera conclusión derivada del trabajo desarrollado.
+\end{enumerate}
+
+% ===================== REFERENCIAS =====================
+\section*{Referencias}
+\printbibliography[heading=none]
+
+\vspace{1em}
+\noindent URL del repositorio: \url{https://github.com/usuario/repositorio}
+
+\end{document}
