@@ -1,0 +1,66 @@
+# Archivos compilados
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.lot
+*.lof
+*.toc
+*.out
+*.run.xml
+*.synctex.gz
+*.synctex.gz(busy)
+*.nav
+*.snm
+*.vrb
+*.xdv
+*.dvi
+*.ps
+
+# latexmk
+*.latexmk
+
+# Índices
+*.idx
+*.ilg
+*.ind
+*.ist
+
+# Glosarios
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+
+# Nomenclatura
+*.nlo
+*.nls
+
+# Comentarios y notas
+*.tdo
+
+# Cache
+*.cache
+*.listing
+
+# Archivos temporales del editor
+*~
+*.swp
+*.swo
+
+# VS Code
+.vscode/
+
+# IntelliJ
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
