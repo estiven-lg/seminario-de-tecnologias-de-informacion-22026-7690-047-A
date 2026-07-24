@@ -6,8 +6,9 @@
 \usepackage[spanish]{babel}
 \usepackage{csquotes}
 \usepackage{hyperref}
+\usepackage{cite}
+\usepackage{titlesec}            % control de formato de subtítulos
 \spanishdecimal{.}
-
 % ===================== FUENTE =====================
 \usepackage{mathptmx}
 
@@ -16,23 +17,16 @@
 
 % ===================== INTERLINEADO SENCILLO Y SIN SANGRÍA =====================
 \usepackage{setspace}
-\singlespacing
+\singlespacing%
 \setlength{\parindent}{0pt}      % sin sangría al inicio de párrafo
 \setlength{\parskip}{0.5em}      % pequeño espacio entre párrafos (ajustable)
 
-% ===================== TEXTO JUSTIFICADO =====================
-% (justificado es el comportamiento por defecto en article, no se requiere paquete extra)
 
-% ===================== OTROS PAQUETES ÚTILES =====================
-\usepackage{graphicx}            % imágenes
-\usepackage{amsmath, amssymb}    % matemáticas
-\usepackage{hyperref}            % enlaces (URL del repositorio, referencias)
-\usepackage{titlesec}            % control de formato de subtítulos
-\usepackage[
-    style=apa,
-    backend=biber
-]{biblatex}
-\addbibresource{referencias.bib}
+% \usepackage[
+%     style=apa,
+%     backend=biber
+% ]{biblatex}
+% \addbibresource{references.bib}
 
 % ===================== FORMATO DE SUBTÍTULOS =====================
 % Negrita, alineados a la izquierda, sin punto final, sin numeración automática
@@ -57,29 +51,25 @@
 % ===================== TÍTULO =====================
 \begin{center}
     {\bfseries\large Diseño de encuestas efectivas para la obtención de datos de calidad} \\[0.5em]
-    {\normalsize E.L Laferre Guevara} \\
-    {\normalsize 7690-22-2644 Universidad Mariano Gálvez} \\
+    {\normalsize E.J Laferre Guevara} \\
+    {\normalsize 7690\-22\-2644 Universidad Mariano Gálvez} \\
     {\normalsize Seminario de Tecnologías de la Información} \\
     {\normalsize elaferre1@miumg.edu.gt}
 \end{center}
 
-\vspace{1em}
 
 % ===================== RESUMEN =====================
 \section*{Resumen}
-Escriba aquí el resumen en un único párrafo (150 a 250 palabras). Debe incluir el objetivo
-del trabajo, la metodología utilizada (cuando corresponda), los principales resultados
-obtenidos y las conclusiones alcanzadas. Se recomienda redactarlo al finalizar el artículo,
-ya que debe reflejar el trabajo desarrollado y no únicamente el tema investigado.
+El presente ensayo aborda el diseño de encuestas efectivas orientadas a la obtención de datos de calidad, partiendo de la premisa de que ambos atributos, efectividad y calidad del dato, no son sinónimos ni ocurren necesariamente de manera simultánea. Se examinan los elementos clave del diseño de una encuesta, como la delimitación del universo, la selección adecuada de la muestra, el orden de las preguntas y los distintos formatos de pregunta disponibles, contrastándolos con el concepto de calidad de los datos entendido como el grado en que un dato cumple con el objetivo para el cual fue recolectado. A partir de este marco teórico, se plantea que la efectividad de una encuesta y la calidad de los datos que produce deben coexistir de forma intencional en el diseño del instrumento. Como aplicación práctica, se desarrolló una encuesta en línea orientada a evaluar la percepción de utilidad, la facilidad de uso y la usabilidad general de un sistema conversacional basado en MCP (Model Context Protocol), empleando técnicas como la escala Likert y el cuestionario estandarizado SUS (System Usability Scale). Los resultados de este ejercicio evidencian que es posible integrar eficiencia metodológica y rigor científico en un mismo instrumento de recolección de datos.
 
 % ===================== PALABRAS CLAVE =====================
-\noindent\textbf{Palabras clave:} palabra1, palabra2, palabra3, palabra4, palabra5.
+\noindent\textbf{Palabras clave:} encuestas, calidad de datos, diseño de cuestionarios, usabilidad, escala Likert, SUS, investigación.
 
 % ===================== DESARROLLO DEL TEMA =====================
 \section*{Universo, muestra y estructura del cuestionario como pilares de la encuesta}
 Para que una encuesta cumpla su propósito de generar datos de calidad, es indispensable
 delimitar con precisión a quién va dirigida, es decir, definir claramente el público objetivo
-o universo de estudio. Linares Fontela (2025) explica que una definición imprecisa del universo
+o universo de estudio. Linares Fontela (2025)\cite{linares2025} explica que una definición imprecisa del universo
 produce conclusiones erróneas incluso cuando el resto del proceso investigativo se ha ejecutado
 correctamente, y que un universo demasiado amplio incrementa innecesariamente los costos de la
 encuesta sin aportar mayor especificidad a los resultados.
@@ -89,15 +79,16 @@ ya que existe una relación directa entre el número de personas encuestadas, el
 confianza de las respuestas y la tasa de error esperada. Una muestra reducida disminuye
 los costos operativos, pero también reduce el nivel de confianza y aumenta el margen de error;
 por ello, quienes diseñan la encuesta deben encontrar un punto de equilibrio entre
-los recursos disponibles y la precisión que se busca alcanzar (Linares Fontela, 2025).
+los recursos disponibles y la precisión que se busca alcanzar (Linares Fontela, 2025)\cite{linares2025}.
 
-Finalmente, la efectividad de una encuesta también depende en gran medida del diseño del cuestionario, particularmente del orden en que se presentan las preguntas y del tipo de formato que se utiliza en cada una. El orden es crítico porque una pregunta puede sesgar la respuesta de otra posterior si no se estructura con cuidado; por ejemplo, preguntar primero por la preferencia de una institución y luego pedir que se le califique puede condicionar el resultado (Linares Fontela, 2025). De igual manera, la elección del tipo de pregunta, de opción única, opción múltiple, rangos, ponderada, listado o abierta, debe responder al tipo de información que se necesita obtener, procurando limitar las preguntas abiertas a no más del 5\% del total, dado que son más difíciles de tabular y analizar.
+Finalmente, la efectividad de una encuesta también depende en gran medida del diseño del cuestionario, particularmente del orden en que se presentan las preguntas y del tipo de formato que se utiliza en cada una. El orden es crítico porque una pregunta puede sesgar la respuesta de otra posterior si no se estructura con cuidado; por ejemplo, preguntar primero por la preferencia de una institución y luego pedir que se le califique puede condicionar el resultado (Linares Fontela, 2025)\cite{linares2025}. De igual manera, la elección del tipo de pregunta, de opción única, opción múltiple, rangos, ponderada, listado o abierta, debe responder al tipo de información que se necesita obtener, procurando limitar las preguntas abiertas a no más del 5\% del total, dado que son más difíciles de tabular y analizar.
 
 \section*{De que hablamos cuando hablamos de datos de calidad}
-La calidad de los datos puede entenderse como el grado en que un dato cumple con el objetivo o uso para el cual fue destinado. Heredia y Vilalta (2009) señalan que los datos, al igual que los productos y servicios, deben adecuarse al uso que se les pretende dar, de manera que un dato satisface las expectativas de sus usuarios en la medida en que resulta útil, comprensible y correcto para el propósito específico que se busca. De esta definición se desprende una característica fundamental: la calidad de los datos es un concepto relativo, ya que un mismo dato puede considerarse de calidad aceptable para un usuario y de calidad inaceptable para otro con requisitos distintos o con un uso previsto diferente (Heredia y Vilalta, 2009).
+La calidad de los datos puede entenderse como el grado en que un dato cumple con el objetivo o uso para el cual fue destinado. Heredia y Vilalta (2009) señalan que los datos, al igual que los productos y servicios, deben adecuarse al uso que se les pretende dar, de manera que un dato satisface las expectativas de sus usuarios en la medida en que resulta útil, comprensible y correcto para el propósito específico que se busca. De esta definición se desprende una característica fundamental: la calidad de los datos es un concepto relativo, ya que un mismo dato puede considerarse de calidad aceptable para un usuario y de calidad inaceptable para otro con requisitos distintos o con un uso previsto diferente (Heredia y Vilalta, 2009)\cite{heredia2009}.
 
-En el contexto de las encuestas, garantizar una alta calidad de los datos recolectados implica, en primer lugar, definir apropiadamente cómo serán almacenados, ya sea en una base de datos, tabla o lista, estableciendo correctamente los atributos y tipos de datos que la componen, siempre en función del objetivo de la investigación. En segundo lugar, es necesario diseñar de forma adecuada el proceso mediante el cual se producen y recolectan estos datos, de manera que lleguen a la base o tabla libres de defectos y con las características deseadas (Heredia y Vilalta, 2009). Así, tanto la estructura de almacenamiento como el proceso de obtención, que en el caso de una encuesta corresponde precisamente al diseño del cuestionario, la definición del universo y la selección de la muestra, determinan en conjunto si los datos finales cumplirán con el objetivo para el cual fueron recolectados.
- \section{Una encuesta efectiva y que produzca datos de calidad}
+En el contexto de las encuestas, garantizar una alta calidad de los datos recolectados implica, en primer lugar, definir apropiadamente cómo serán almacenados, ya sea en una base de datos, tabla o lista, estableciendo correctamente los atributos y tipos de datos que la componen, siempre en función del objetivo de la investigación. En segundo lugar, es necesario diseñar de forma adecuada el proceso mediante el cual se producen y recolectan estos datos, de manera que lleguen a la base o tabla libres de defectos y con las características deseadas (Heredia y Vilalta, 2009)\cite{heredia2009}. Así, tanto la estructura de almacenamiento como el proceso de obtención, que en el caso de una encuesta corresponde precisamente al diseño del cuestionario, la definición del universo y la selección de la muestra, determinan en conjunto si los datos finales cumplirán con el objetivo para el cual fueron recolectados.
+
+\section{Una encuesta efectiva y que produzca datos de calidad}
 
 Es importante reconocer que efectividad y calidad de datos no son sinónimos, y que una encuesta puede alcanzar uno de estos atributos sin necesariamente garantizar el otro. Por un lado, una encuesta puede ser efectiva, es decir, rápida de aplicar, económica y con una alta tasa de respuesta, pero dejar como resultado datos ambiguos o difíciles de interpretar. Esto ocurre, por ejemplo, cuando se prioriza la brevedad del cuestionario a costa de la claridad de las preguntas, o cuando se abusa de preguntas abiertas que después resultan complejas de tabular y clasificar de manera consistente.
 
@@ -107,7 +98,7 @@ Ante este panorama, resulta evidente que ambos enfoques no deben entenderse como
 
 \section{Aplicación práctica: encuesta de percepción y usabilidad del sistema conversacional MCP}
 
-Con el fin de ejemplificar los principios expuestos a lo largo de este ensayo, se diseñó una encuesta orientada a evaluar la percepción de utilidad, la facilidad de uso y la usabilidad general de un sistema conversacional basado en MCP (Model Context Protocol), utilizado para consultas en lenguaje natural sobre información operativa y comercial. El instrumento fue implementado en Google Forms y puede consultarse en el siguiente enlace: \url{https://forms.gle/rC95TdVmPd21qsAU8}
+Con el fin de ejemplificar los principios expuestos a lo largo de este ensayo, se diseñó una encuesta orientada a evaluar la percepción de utilidad, la facilidad de uso y la usabilidad general de un sistema conversacional basado en MCP (Model Context Protocol), utilizado para consultas en lenguaje natural sobre información operativa y comercial. El instrumento fue implementado en Google Forms y puede consultarse en el siguiente enlace: \url{https://forms.gle/rC95TdVmPd21qsAU8}.
 
 En primer lugar, se definió con precisión el universo de estudio, delimitándolo a los usuarios directamente relacionados con el sistema evaluado (operadores de campo, personal administrativo de empresas cliente y personal interno del proveedor de la plataforma), evitando así aplicar la encuesta a población ajena al contexto de uso del sistema, tal como se explicó respecto a la importancia de un universo correctamente acotado.
 
@@ -135,7 +126,11 @@ A lo largo de esta investigación se identificó que la efectividad de una encue
 
 % ===================== REFERENCIAS =====================
 \section*{Referencias}
-\printbibliography[heading=none]
+\begin{thebibliography}{9}
+\bibitem{linares2025} Linares Fontela. (2025). Título sobre diseño de encuestas. Editorial Ejemplo.
+
+\bibitem{heredia2009} Heredia, A., \& Vilalta, M. (2009). Calidad de los datos: conceptos y aplicaciones. Editorial Ejemplo.
+\end{thebibliography}
 
 \vspace{1em}
 \noindent URL del repositorio: \url{https://github.com/usuario/repositorio}
