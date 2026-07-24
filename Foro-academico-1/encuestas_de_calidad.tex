@@ -5,8 +5,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[spanish]{babel}
 \usepackage{csquotes}
-\usepackage{hyperref}
-\usepackage{cite}
+\usepackage[breaklinks=true]{hyperref}
 \usepackage{titlesec}            % control de formato de subtítulos
 \spanishdecimal{.}
 % ===================== FUENTE =====================
@@ -21,20 +20,14 @@
 \setlength{\parindent}{0pt}      % sin sangría al inicio de párrafo
 \setlength{\parskip}{0.5em}      % pequeño espacio entre párrafos (ajustable)
 
+\usepackage[style=apa, backend=biber]{biblatex}
+\addbibresource{references.bib}
 
-% \usepackage[
-%     style=apa,
-%     backend=biber
-% ]{biblatex}
-% \addbibresource{references.bib}
 
 % ===================== FORMATO DE SUBTÍTULOS =====================
 % Negrita, alineados a la izquierda, sin punto final, sin numeración automática
 \titleformat{\section}{\bfseries}{}{0pt}{}
 \titlespacing*{\section}{0pt}{1em}{0.3em} % espacio antes/después (evita más de 1 línea en blanco)
-
-\titleformat{\subsection}{\bfseries}{}{0pt}{}
-\titlespacing*{\subsection}{0pt}{0.8em}{0.2em}
 
 % ===================== CONFIGURACIÓN DE HYPERREF =====================
 \hypersetup{
@@ -69,24 +62,24 @@ El presente ensayo aborda el diseño de encuestas efectivas orientadas a la obte
 \section*{Universo, muestra y estructura del cuestionario como pilares de la encuesta}
 Para que una encuesta cumpla su propósito de generar datos de calidad, es indispensable
 delimitar con precisión a quién va dirigida, es decir, definir claramente el público objetivo
-o universo de estudio. Linares Fontela (2025)\cite{linares2025} explica que una definición imprecisa del universo
+o universo de estudio.\parencite{linares2025guia} explica que una definición imprecisa del universo
 produce conclusiones erróneas incluso cuando el resto del proceso investigativo se ha ejecutado
 correctamente, y que un universo demasiado amplio incrementa innecesariamente los costos de la
 encuesta sin aportar mayor especificidad a los resultados.
-
+    
 Vinculado a esto, es fundamental estimar de forma adecuada el tamaño de la muestra,
 ya que existe una relación directa entre el número de personas encuestadas, el nivel de
 confianza de las respuestas y la tasa de error esperada. Una muestra reducida disminuye
 los costos operativos, pero también reduce el nivel de confianza y aumenta el margen de error;
 por ello, quienes diseñan la encuesta deben encontrar un punto de equilibrio entre
-los recursos disponibles y la precisión que se busca alcanzar (Linares Fontela, 2025)\cite{linares2025}.
+los recursos disponibles y la precisión que se busca alcanzar \parencite{linares2025guia}.
 
-Finalmente, la efectividad de una encuesta también depende en gran medida del diseño del cuestionario, particularmente del orden en que se presentan las preguntas y del tipo de formato que se utiliza en cada una. El orden es crítico porque una pregunta puede sesgar la respuesta de otra posterior si no se estructura con cuidado; por ejemplo, preguntar primero por la preferencia de una institución y luego pedir que se le califique puede condicionar el resultado (Linares Fontela, 2025)\cite{linares2025}. De igual manera, la elección del tipo de pregunta, de opción única, opción múltiple, rangos, ponderada, listado o abierta, debe responder al tipo de información que se necesita obtener, procurando limitar las preguntas abiertas a no más del 5\% del total, dado que son más difíciles de tabular y analizar.
+Finalmente, la efectividad de una encuesta también depende en gran medida del diseño del cuestionario, particularmente del orden en que se presentan las preguntas y del tipo de formato que se utiliza en cada una. El orden es crítico porque una pregunta puede sesgar la respuesta de otra posterior si no se estructura con cuidado; por ejemplo, preguntar primero por la preferencia de una institución y luego pedir que se le califique puede condicionar el resultado \parencite{linares2025guia}. De igual manera, la elección del tipo de pregunta, de opción única, opción múltiple, rangos, ponderada, listado o abierta, debe responder al tipo de información que se necesita obtener, procurando limitar las preguntas abiertas a no más del 5\% del total, dado que son más difíciles de tabular y analizar.
 
 \section*{De que hablamos cuando hablamos de datos de calidad}
-La calidad de los datos puede entenderse como el grado en que un dato cumple con el objetivo o uso para el cual fue destinado. Heredia y Vilalta (2009) señalan que los datos, al igual que los productos y servicios, deben adecuarse al uso que se les pretende dar, de manera que un dato satisface las expectativas de sus usuarios en la medida en que resulta útil, comprensible y correcto para el propósito específico que se busca. De esta definición se desprende una característica fundamental: la calidad de los datos es un concepto relativo, ya que un mismo dato puede considerarse de calidad aceptable para un usuario y de calidad inaceptable para otro con requisitos distintos o con un uso previsto diferente (Heredia y Vilalta, 2009)\cite{heredia2009}.
+La calidad de los datos puede entenderse como el grado en que un dato cumple con el objetivo o uso para el cual fue destinado. Heredia y Vilalta (2009) señalan que los datos, al igual que los productos y servicios, deben adecuarse al uso que se les pretende dar, de manera que un dato satisface las expectativas de sus usuarios en la medida en que resulta útil, comprensible y correcto para el propósito específico que se busca. De esta definición se desprende una característica fundamental: la calidad de los datos es un concepto relativo, ya que un mismo dato puede considerarse de calidad aceptable para un usuario y de calidad inaceptable para otro con requisitos distintos o con un uso previsto diferente \parencite{heredia2009calidad}.
 
-En el contexto de las encuestas, garantizar una alta calidad de los datos recolectados implica, en primer lugar, definir apropiadamente cómo serán almacenados, ya sea en una base de datos, tabla o lista, estableciendo correctamente los atributos y tipos de datos que la componen, siempre en función del objetivo de la investigación. En segundo lugar, es necesario diseñar de forma adecuada el proceso mediante el cual se producen y recolectan estos datos, de manera que lleguen a la base o tabla libres de defectos y con las características deseadas (Heredia y Vilalta, 2009)\cite{heredia2009}. Así, tanto la estructura de almacenamiento como el proceso de obtención, que en el caso de una encuesta corresponde precisamente al diseño del cuestionario, la definición del universo y la selección de la muestra, determinan en conjunto si los datos finales cumplirán con el objetivo para el cual fueron recolectados.
+En el contexto de las encuestas, garantizar una alta calidad de los datos recolectados implica, en primer lugar, definir apropiadamente cómo serán almacenados, ya sea en una base de datos, tabla o lista, estableciendo correctamente los atributos y tipos de datos que la componen, siempre en función del objetivo de la investigación. En segundo lugar, es necesario diseñar de forma adecuada el proceso mediante el cual se producen y recolectan estos datos, de manera que lleguen a la base o tabla libres de defectos y con las características deseadas \parencite{heredia2009calidad}. Así, tanto la estructura de almacenamiento como el proceso de obtención, que en el caso de una encuesta corresponde precisamente al diseño del cuestionario, la definición del universo y la selección de la muestra, determinan en conjunto si los datos finales cumplirán con el objetivo para el cual fueron recolectados.
 
 \section{Una encuesta efectiva y que produzca datos de calidad}
 
@@ -117,22 +110,18 @@ A lo largo de esta investigación se identificó que la efectividad de una encue
 % ===================== CONCLUSIONES =====================
 \section*{Conclusiones}
 \begin{enumerate}
-\item Una encuesta efectiva no garantiza por sí sola datos de calidad, así como una encuesta que produce datos de calidad no siempre es óptima en su ejecución; ambas dimensiones deben diseñarse de manera conjunta desde el inicio del proceso.
+    \item Una encuesta efectiva no garantiza por sí sola datos de calidad, así como una encuesta que produce datos de calidad no siempre es óptima en su ejecución; ambas dimensiones deben diseñarse de manera conjunta desde el inicio del proceso.
 
-\item La calidad de los datos recolectados depende directamente de decisiones tomadas en la etapa de diseño, como la delimitación del universo, el orden de las preguntas y la selección adecuada del tipo de pregunta según la información buscada.
+    \item La calidad de los datos recolectados depende directamente de decisiones tomadas en la etapa de diseño, como la delimitación del universo, el orden de las preguntas y la selección adecuada del tipo de pregunta según la información buscada.
 
-\item La encuesta desarrollada como ejemplo práctico en este ensayo, orientada a evaluar la percepción de utilidad, facilidad de uso y usabilidad de un sistema conversacional basado en MCP, demuestra que es posible integrar eficiencia y rigor metodológico en un mismo instrumento, respondiendo así a la pregunta de investigación planteada.
+    \item La encuesta desarrollada como ejemplo práctico en este ensayo, orientada a evaluar la percepción de utilidad, facilidad de uso y usabilidad de un sistema conversacional basado en MCP, demuestra que es posible integrar eficiencia y rigor metodológico en un mismo instrumento, respondiendo así a la pregunta de investigación planteada.
 \end{enumerate}
 
 % ===================== REFERENCIAS =====================
 \section*{Referencias}
-\begin{thebibliography}{9}
-\bibitem{linares2025} Linares Fontela. (2025). Título sobre diseño de encuestas. Editorial Ejemplo.
-
-\bibitem{heredia2009} Heredia, A., \& Vilalta, M. (2009). Calidad de los datos: conceptos y aplicaciones. Editorial Ejemplo.
-\end{thebibliography}
+\printbibliography{}
 
 \vspace{1em}
-\noindent URL del repositorio: \url{https://github.com/usuario/repositorio}
+\noindent URL del repositorio: \href{https://github.com/estiven-lg/seminario-de-tecnologias-de-informacion-22026-7690-047-A}{Repositorio del codigo Latex}
 
 \end{document}
