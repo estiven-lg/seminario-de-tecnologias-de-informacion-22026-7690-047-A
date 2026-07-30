@@ -19,6 +19,54 @@
 
 \refsection{0}
   \datalist[entry]{apa/apasortcite//global/global/global}
+    \entry{duarte2024encuesta}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=8d946f6a0cf8b55ece9ef10b83da60a3}{%
+           family={Duarte\bibnamedelima Sánchez},
+           familyi={D\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={D.\bibnamedelimi D.},
+           giveni={D\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ce722926a1523d3048bc2dd6d611571d}{%
+           family={Guerrero\bibnamedelima Barreto},
+           familyi={G\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{79b5523e29ca6da306764dfd004577fc}
+      \strng{fullhash}{79b5523e29ca6da306764dfd004577fc}
+      \strng{fullhashraw}{79b5523e29ca6da306764dfd004577fc}
+      \strng{bibnamehash}{79b5523e29ca6da306764dfd004577fc}
+      \strng{authorbibnamehash}{79b5523e29ca6da306764dfd004577fc}
+      \strng{authornamehash}{79b5523e29ca6da306764dfd004577fc}
+      \strng{authorfullhash}{79b5523e29ca6da306764dfd004577fc}
+      \strng{authorfullhashraw}{79b5523e29ca6da306764dfd004577fc}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Revista de Ciencias Empresariales, Tributarias, Comerciales y Administrativas}
+      \field{number}{2}
+      \field{title}{La encuesta como instrumento de recolección de datos, confiabilidad y validez en investigación científica}
+      \field{urlday}{24}
+      \field{urlmonth}{7}
+      \field{urlyear}{2026}
+      \field{volume}{3}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \field{pages}{94\bibrangedash 107}
+      \range{pages}{14}
+      \verb{urlraw}
+      \verb https://www.educaciontributaria.com.py/revista/index.php/rcetca/article/view/70
+      \endverb
+      \verb{url}
+      \verb https://www.educaciontributaria.com.py/revista/index.php/rcetca/article/view/70
+      \endverb
+    \endentry
     \entry{heredia2009calidad}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=cd9ac35afd18e176d2dc21b684ab8410}{%
@@ -109,6 +157,54 @@
     \endentry
   \enddatalist
   \datalist[entry]{apa/global//global/global/global}
+    \entry{duarte2024encuesta}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=8d946f6a0cf8b55ece9ef10b83da60a3}{%
+           family={Duarte\bibnamedelima Sánchez},
+           familyi={D\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={D.\bibnamedelimi D.},
+           giveni={D\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ce722926a1523d3048bc2dd6d611571d}{%
+           family={Guerrero\bibnamedelima Barreto},
+           familyi={G\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{79b5523e29ca6da306764dfd004577fc}
+      \strng{fullhash}{79b5523e29ca6da306764dfd004577fc}
+      \strng{fullhashraw}{79b5523e29ca6da306764dfd004577fc}
+      \strng{bibnamehash}{79b5523e29ca6da306764dfd004577fc}
+      \strng{authorbibnamehash}{79b5523e29ca6da306764dfd004577fc}
+      \strng{authornamehash}{79b5523e29ca6da306764dfd004577fc}
+      \strng{authorfullhash}{79b5523e29ca6da306764dfd004577fc}
+      \strng{authorfullhashraw}{79b5523e29ca6da306764dfd004577fc}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Revista de Ciencias Empresariales, Tributarias, Comerciales y Administrativas}
+      \field{number}{2}
+      \field{title}{La encuesta como instrumento de recolección de datos, confiabilidad y validez en investigación científica}
+      \field{urlday}{24}
+      \field{urlmonth}{7}
+      \field{urlyear}{2026}
+      \field{volume}{3}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \field{pages}{94\bibrangedash 107}
+      \range{pages}{14}
+      \verb{urlraw}
+      \verb https://www.educaciontributaria.com.py/revista/index.php/rcetca/article/view/70
+      \endverb
+      \verb{url}
+      \verb https://www.educaciontributaria.com.py/revista/index.php/rcetca/article/view/70
+      \endverb
+    \endentry
     \entry{heredia2009calidad}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=cd9ac35afd18e176d2dc21b684ab8410}{%
