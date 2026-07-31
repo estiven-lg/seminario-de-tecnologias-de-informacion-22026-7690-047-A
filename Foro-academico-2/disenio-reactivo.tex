@@ -1,0 +1,86 @@
+\documentclass[12pt, letterpaper]{article}
+
+
+% ===================== IDIOMA Y CODIFICACIÓN =====================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{csquotes}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{titlesec}            % control de formato de subtítulos
+\usepackage{ragged2e}
+\spanishdecimal{.}
+% ===================== FUENTE =====================
+\usepackage{mathptmx}
+
+% ===================== MÁRGENES Y PÁGINA =====================
+\usepackage[letterpaper, margin=2.5cm]{geometry}
+
+% ===================== INTERLINEADO SENCILLO Y SIN SANGRÍA =====================
+\usepackage{setspace}
+\singlespacing%
+\setlength{\parindent}{0pt}      % sin sangría al inicio de párrafo
+\setlength{\parskip}{0.5em}      % pequeño espacio entre párrafos (ajustable)
+
+\usepackage[style=apa, backend=biber]{biblatex}
+\addbibresource{references.bib}
+
+
+% ===================== FORMATO DE SUBTÍTULOS =====================
+% Negrita, alineados a la izquierda, sin punto final, sin numeración automática
+\titleformat{\section}{\bfseries}{}{0pt}{}
+\titlespacing*{\section}{0pt}{1em}{0.3em} % espacio antes/después (evita más de 1 línea en blanco)
+
+% ===================== CONFIGURACIÓN DE HYPERREF =====================
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=blue,
+    pdftitle={Diseño y buenas prácticas para el desarrollo de aplicaciones reactivas basadas en el Manifiesto Reactivo
+},
+    pdfauthor={Estiven Joel Laferre Guevara}
+}
+
+\begin{document}
+\RaggedRight%
+
+% ===================== TÍTULO =====================
+\begin{center}
+    {\bfseries\large Diseño y buenas prácticas para el desarrollo de aplicaciones reactivas basadas en el Manifiesto Reactivo
+    } \\[0.5em]
+    {\normalsize E.J Laferre Guevara} \\
+    {\normalsize 7690\-22\-2644 Universidad Mariano Gálvez} \\
+    {\normalsize Seminario de Tecnologías de la Información} \\
+    {\normalsize elaferre1@miumg.edu.gt}
+\end{center}
+
+
+% ===================== RESUMEN =====================
+\section*{Resumen}
+El presente ensayo aborda el diseño de encuestas efectivas orientadas a la obtención de datos de calidad, partiendo de la premisa de que ambos atributos, efectividad y calidad del dato, no son sinónimos ni ocurren necesariamente de manera simultánea. Se examinan los elementos clave del diseño de una encuesta, como la delimitación del universo, la selección adecuada de la muestra, el orden de las preguntas y los distintos formatos de pregunta disponibles, contrastándolos con el concepto de calidad de los datos entendido como el grado en que un dato cumple con el objetivo para el cual fue recolectado. A partir de este marco teórico, se plantea que la efectividad de una encuesta y la calidad de los datos que produce deben coexistir de forma intencional en el diseño del instrumento. Como aplicación práctica, se desarrolló una encuesta en línea orientada a evaluar la percepción de utilidad, la facilidad de uso y la usabilidad general de un sistema conversacional basado en MCP (Model Context Protocol), empleando técnicas como la escala Likert y el cuestionario estandarizado SUS (System Usability Scale). Los resultados de este ejercicio evidencian que es posible integrar eficiencia metodológica y rigor científico en un mismo instrumento de recolección de datos.
+
+% ===================== PALABRAS CLAVE =====================
+\noindent\textbf{Palabras clave:} Arquitectura reactiva, Manifiesto Reactivo, sistemas resilientes, programación asíncrona, tolerancia a fallos, contrapresión (backpressure), elasticidad, procesamiento de flujos de datos
+
+% ===================== DESARROLLO DEL TEMA =====================
+\section*{Arquitectura reactiva}
+fdgf
+
+% ===================== OBSERVACIONES Y COMENTARIOS =====================
+\section*{Observaciones y comentarios}
+
+
+% ===================== CONCLUSIONES =====================
+\section*{Conclusiones}
+\begin{enumerate}
+    \item ...
+\end{enumerate}
+
+% ===================== REFERENCIAS =====================
+\printbibliography{}
+
+\vspace{1em}
+\noindent URL del repositorio: \href{https://github.com/estiven-lg/seminario-de-tecnologias-de-informacion-22026-7690-047-A}{Repositorio del codigo Latex}
+
+\end{document}
