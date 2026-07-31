@@ -14,13 +14,13 @@
 \usepackage{mathptmx}
 
 % ===================== MÁRGENES Y PÁGINA =====================
-\usepackage[letterpaper, margin=2.5cm]{geometry}
+\usepackage[letterpaper, margin=2.54cm]{geometry}
 
 % ===================== INTERLINEADO SENCILLO Y SIN SANGRÍA =====================
 \usepackage{setspace}
 \singlespacing%
 \setlength{\parindent}{0pt}      % sin sangría al inicio de párrafo
-\setlength{\parskip}{0.5em}      % pequeño espacio entre párrafos (ajustable)
+\setlength{\parskip}{0em}      % pequeño espacio entre párrafos (ajustable)
 
 \usepackage[style=apa, backend=biber]{biblatex}
 \addbibresource{references.bib}
@@ -61,14 +61,13 @@
 
 % ===================== TÍTULO =====================
 \begin{center}
-    {\bfseries\large Diseño y buenas prácticas para el desarrollo de aplicaciones reactivas basadas en el Manifiesto Reactivo
-    } \\[0.5em]
-    {\normalsize E.J Laferre Guevara} \\
-    {\normalsize 7690\-22\-2644 Universidad Mariano Gálvez} \\
-    {\normalsize Seminario de Tecnologías de la Información} \\
-    {\normalsize \href{mailto:elaferre1@miumg.edu.gt}{elaferre1@miumg.edu.gt}}
+  {\bfseries\large Diseño y buenas prácticas para el desarrollo de aplicaciones reactivas basadas en el Manifiesto Reactivo
+  } \\[0.5em]
+  {\normalsize E.J Laferre Guevara} \\
+  {\normalsize 7690\-22\-2644 Universidad Mariano Gálvez} \\
+  {\normalsize Seminario de Tecnologías de la Información} \\
+  {\normalsize \href{mailto:elaferre1@miumg.edu.gt}{elaferre1@miumg.edu.gt}}
 \end{center}
-
 
 % ===================== RESUMEN =====================
 \section*{Resumen}
@@ -77,7 +76,6 @@ Este ensayo explora la arquitectura reactiva como enfoque de diseño de sistemas
 El Manifiesto Reactivo formaliza este enfoque mediante cuatro pilares: sistemas responsivos, resilientes, elásticos y orientados a mensajes, donde la comunicación asíncrona sostiene la elasticidad y la resiliencia del sistema. A partir de este marco, se analizan los patrones de diseño propuestos en los Reactive Principles, entre ellos la partición del estado, la comunicación mediante hechos inmutables, el aislamiento de mutaciones, la coordinación del flujo de datos, la localización del estado y la observación de las comunicaciones, cada uno vinculado a un pilar del manifiesto.
 
 Finalmente, se presentan buenas prácticas para el desarrollo de aplicaciones reactivas: adopción gradual del enfoque, uso de frameworks especializados, gestión de la contrapresión, mecanismos de tolerancia a fallos, pruebas exhaustivas, monitoreo del rendimiento y actualización constante frente a la evolución de las herramientas del paradigma.
-
 
 % ===================== PALABRAS CLAVE =====================
 \noindent\textbf{Palabras clave:} Arquitectura reactiva, Manifiesto Reactivo, sistemas resilientes, programación asíncrona, tolerancia a fallos, contrapresión (backpressure), elasticidad, procesamiento de flujos de datos
@@ -125,12 +123,14 @@ En conjunto, estas prácticas permiten aplicar los principios del Manifiesto Rea
 
 % ===================== OBSERVACIONES Y COMENTARIOS =====================
 \section*{Observaciones y comentarios}
-
+En los últimos años, la programación reactiva se ha vuelto prácticamente un estándar, ya que la mayoría de los sistemas exigen datos actualizados y interfaces interactivas, es decir, capaces de cambiar y reaccionar conforme a las acciones del usuario. Esto refleja lo planteado por Güzel (2021): los usuarios ya no toleran interfaces estáticas ni tiempos de espera, y esperan que la información se refleje de forma inmediata. Por ello, dominar los principios de la arquitectura reactiva se ha vuelto cada vez más relevante para el desarrollo de software moderno.
 
 % ===================== CONCLUSIONES =====================
 \section*{Conclusiones}
 \begin{enumerate}
-    \item ...
+  \item Ser reactivo no equivale únicamente a manejar datos en tiempo real. Como se vio en el Manifiesto Reactivo, la responsividad es solo uno de los cuatro pilares; un sistema verdaderamente reactivo también debe ser resiliente ante fallos y elástico ante cambios en la carga, características que van más allá de la actualización inmediata de datos.
+  \item Los sistemas reactivos trascienden la programación individual, por lo que se habla de arquitectura reactiva. Muchas de sus características clave, como la resiliencia y la elasticidad, no dependen de un solo componente, sino que se logran gracias a la cooperación entre varios nodos o componentes distribuidos, lo cual las convierte en decisiones de diseño a nivel de sistema y no solo de código.
+  \item Los patrones de diseño y las buenas prácticas revisadas no deben aplicarse de forma aislada, sino en conjunto, ya que los pilares del manifiesto están interrelacionados entre sí. Por ello, construir una aplicación reactiva de forma correcta requiere considerar tanto las decisiones arquitectónicas como las prácticas de desarrollo desde las primeras etapas del proyecto, y no como un ajuste posterior.
 \end{enumerate}
 
 % ===================== REFERENCIAS =====================
