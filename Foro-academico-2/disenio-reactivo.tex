@@ -28,8 +28,22 @@
 
 % ===================== FORMATO DE SUBTÍTULOS =====================
 % Negrita, alineados a la izquierda, sin punto final, sin numeración automática
-\titleformat{\section}{\bfseries}{}{0pt}{}
-\titlespacing*{\section}{0pt}{1em}{0.3em} % espacio antes/después (evita más de 1 línea en blanco)
+
+% Secciones
+\titleformat{\section}
+  {\normalfont\normalsize\bfseries}
+  {}{0pt}{}
+
+\titlespacing*{\section}
+  {0pt}{1em}{0.3em}
+
+% Subsecciones
+\titleformat{\subsection}
+  {\normalfont\normalsize\bfseries}
+  {}{0pt}{}
+
+\titlespacing*{\subsection}
+  {0pt}{0.8em}{0.2em}
 
 % ===================== CONFIGURACIÓN DE HYPERREF =====================
 \hypersetup{
@@ -52,20 +66,62 @@
     {\normalsize E.J Laferre Guevara} \\
     {\normalsize 7690\-22\-2644 Universidad Mariano Gálvez} \\
     {\normalsize Seminario de Tecnologías de la Información} \\
-    {\normalsize elaferre1@miumg.edu.gt}
+    {\normalsize \href{mailto:elaferre1@miumg.edu.gt}{elaferre1@miumg.edu.gt}}
 \end{center}
 
 
 % ===================== RESUMEN =====================
 \section*{Resumen}
-El presente ensayo aborda el diseño de encuestas efectivas orientadas a la obtención de datos de calidad, partiendo de la premisa de que ambos atributos, efectividad y calidad del dato, no son sinónimos ni ocurren necesariamente de manera simultánea. Se examinan los elementos clave del diseño de una encuesta, como la delimitación del universo, la selección adecuada de la muestra, el orden de las preguntas y los distintos formatos de pregunta disponibles, contrastándolos con el concepto de calidad de los datos entendido como el grado en que un dato cumple con el objetivo para el cual fue recolectado. A partir de este marco teórico, se plantea que la efectividad de una encuesta y la calidad de los datos que produce deben coexistir de forma intencional en el diseño del instrumento. Como aplicación práctica, se desarrolló una encuesta en línea orientada a evaluar la percepción de utilidad, la facilidad de uso y la usabilidad general de un sistema conversacional basado en MCP (Model Context Protocol), empleando técnicas como la escala Likert y el cuestionario estandarizado SUS (System Usability Scale). Los resultados de este ejercicio evidencian que es posible integrar eficiencia metodológica y rigor científico en un mismo instrumento de recolección de datos.
+Este ensayo explora la arquitectura reactiva como enfoque de diseño de sistemas cuyo objetivo central es mantener la responsividad bajo cualquier condición, ya sea alta carga, fallos parciales o cambios en la demanda, en respuesta a las exigencias del usuario moderno, que depende del software y no tolera demoras ni interrupciones.
+
+El Manifiesto Reactivo formaliza este enfoque mediante cuatro pilares: sistemas responsivos, resilientes, elásticos y orientados a mensajes, donde la comunicación asíncrona sostiene la elasticidad y la resiliencia del sistema. A partir de este marco, se analizan los patrones de diseño propuestos en los Reactive Principles, entre ellos la partición del estado, la comunicación mediante hechos inmutables, el aislamiento de mutaciones, la coordinación del flujo de datos, la localización del estado y la observación de las comunicaciones, cada uno vinculado a un pilar del manifiesto.
+
+Finalmente, se presentan buenas prácticas para el desarrollo de aplicaciones reactivas: adopción gradual del enfoque, uso de frameworks especializados, gestión de la contrapresión, mecanismos de tolerancia a fallos, pruebas exhaustivas, monitoreo del rendimiento y actualización constante frente a la evolución de las herramientas del paradigma.
+
 
 % ===================== PALABRAS CLAVE =====================
 \noindent\textbf{Palabras clave:} Arquitectura reactiva, Manifiesto Reactivo, sistemas resilientes, programación asíncrona, tolerancia a fallos, contrapresión (backpressure), elasticidad, procesamiento de flujos de datos
 
 % ===================== DESARROLLO DEL TEMA =====================
-\section*{Arquitectura reactiva}
-fdgf
+\section*{Fundamentos de la arquitectura reactiva}
+Según \parencite{guzel2021reactive}, la arquitectura reactiva surge como respuesta a un cambio profundo en la forma en que se construyen y usan los sistemas de software actuales. Mientras que hace una década las aplicaciones se instalaban en pocos nodos y manejaban volúmenes de datos relativamente estáticos, hoy se despliegan en cientos o miles de máquinas, procesan datos que cambian constantemente, y ya no es aceptable la indisponibilidad del servicio. Este cambio técnico es, en el fondo, consecuencia de algo más profundo: la evolución en las expectativas de los usuarios, quienes dependen del software para su vida cotidiana y no toleran demoras ni interrupciones, bajo riesgo de migrar hacia alternativas de la competencia. Por lo tanto, la arquitectura reactiva puede definirse como un enfoque de diseño de sistemas cuyo objetivo central es ofrecer una experiencia responsiva bajo cualquier condición, ya sea alta carga, fallos parciales o cambios en la demanda.
+
+Para formalizar este objetivo, en 2014 se publicó el Manifiesto de Sistemas Reactivos, que puede entenderse como una extensión concreta de la arquitectura reactiva: mientras esta última plantea el objetivo general de la responsividad, el manifiesto traduce ese objetivo en cuatro características de diseño necesarias para alcanzarlo. Un sistema reactivo debe ser responsivo, proporcionando respuestas oportunas y consistentes, incluso al informar errores o situaciones inesperadas; resiliente, manteniendo su capacidad de respuesta ante fallos mediante el aislamiento y la contención de errores en componentes específicos; elástico, ajustando dinámicamente sus recursos ante variaciones en la carga de trabajo, evitando cuellos de botella; y orientado a mensajes, comunicando sus componentes mediante intercambio asíncrono, lo cual reduce el acoplamiento, favorece el aislamiento y permite un uso más eficiente de los recursos \parencite{boner2014reactive}.
+
+Estos cuatro principios están interrelacionados: la comunicación orientada a mensajes favorece el desacoplamiento entre componentes y facilita tanto la resiliencia como la elasticidad, lo cual permite finalmente sostener la responsividad del sistema. Por esta razón, el manifiesto no debe entenderse como una simple lista de características aisladas, sino como un marco que operacionaliza el objetivo central de la arquitectura reactiva: mantener sistemas confiables, adaptables y capaces de responder de forma oportuna ante las exigencias actuales.
+
+\section*{Componentes y patrones de la arquitectura reactiva}
+Además de los cuatro pilares del Manifiesto Reactivo, existen patrones de diseño que orientan la construcción práctica de sistemas reactivos: soluciones reutilizables a problemas recurrentes del diseño distribuido, que traducen los principios del manifiesto en decisiones concretas de implementación. Estos patrones fueron formalizados por \textcite{boner2022reactive} en \textit{The Reactive Principles}, complemento técnico al Manifiesto Reactivo.
+
+Entre los principales se encuentran: \textit{particionar el estado}, que divide el estado de la aplicación en fragmentos independientes para distribuir la carga entre nodos; \textit{comunicar hechos}, que privilegia el uso de eventos inmutables sobre el estado mutable como medio de comunicación entre componentes; \textit{aislar mutaciones}, que contiene el estado mutable en compartimentos separados (\textit{bulkheads}) para evitar que un fallo se propague en cascada; \textit{coordinar el flujo de datos}, que permite a cada componente controlar su propio ritmo de consumo mediante mecanismos de \textit{backpressure}; \textit{localizar el estado}, que coubica datos y procesamiento para reducir la latencia; y \textit{observar las comunicaciones}, que monitorea el intercambio de mensajes entre componentes para detectar cuellos de botella y sostener decisiones de elasticidad \parencite{boner2022reactive}.
+
+En conjunto, estos patrones materializan los pilares del manifiesto: la partición y localización del estado favorecen la elasticidad, el aislamiento de mutaciones refuerza la resiliencia, y la comunicación por hechos junto con la coordinación del flujo de datos sostienen la orientación a mensajes.
+
+\section*{Buenas prácticas para el desarrollo de aplicaciones reactivas}
+El desarrollo de aplicaciones reactivas requiere prácticas que permitan gestionar la asincronía, controlar el flujo de datos, responder ante fallos y mantener un rendimiento adecuado. La aplicación de estas recomendaciones contribuye a crear sistemas más eficientes, resilientes y adaptables.
+
+\subsection*{Adoptar el enfoque reactivo de manera gradual}
+Se recomienda comenzar con componentes pequeños y manejables antes de aplicar la programación reactiva a sistemas complejos. Esto permite comprender los flujos asíncronos, identificar dificultades y reducir los riesgos durante la implementación. Posteriormente, el enfoque reactivo puede incorporarse progresivamente en otras áreas de la aplicación \parencites{aiimtech2024understanding}{sousa2025java}.
+
+\subsection*{Utilizar herramientas y \textit{frameworks} adecuados}
+El uso de herramientas consolidadas facilita el desarrollo y evita crear soluciones desde cero. Tecnologías como Project Reactor, RxJava, Spring WebFlux, Akka y Vert.x proporcionan mecanismos para trabajar con eventos, operaciones asíncronas y flujos de datos. La selección debe realizarse de acuerdo con las necesidades y características de cada proyecto \parencites{saeed2025reactive}{sousa2025java}.
+
+\subsection*{Gestionar el flujo de datos y la contrapresión}
+La contrapresión o \textit{backpressure} ocurre cuando un productor genera datos a una velocidad mayor que la capacidad de procesamiento del consumidor. Para evitar la sobrecarga, pueden utilizarse mecanismos como el almacenamiento temporal de datos, la limitación de la velocidad de procesamiento y el control de la carga. Estas estrategias ayudan a mantener la estabilidad y la capacidad de respuesta del sistema \parencites{saeed2025reactive}{sousa2025java}.
+
+\subsection*{Diseñar sistemas resilientes ante fallos}
+Los sistemas reactivos deben considerar que los errores pueden ocurrir. Por ello, es importante implementar reintentos controlados, respuestas alternativas o \textit{fallbacks}, e interruptores de circuito o \textit{circuit breakers}. Estas estrategias ayudan a evitar que un fallo se propague y afecte el funcionamiento completo de la aplicación \parencite{saeed2025reactive}.
+
+\subsection*{Realizar pruebas exhaustivas}
+Las pruebas permiten verificar el comportamiento de los flujos reactivos ante errores, casos límite y diferentes niveles de carga. Debido a la naturaleza asíncrona de estos sistemas, es importante realizar pruebas unitarias, de integración y de estrés para comprobar su funcionamiento en distintas condiciones \parencites{saeed2025reactive}{aiimtech2024understanding}.
+
+\subsection*{Monitorear y optimizar el rendimiento}
+El monitoreo continuo permite detectar errores, identificar cuellos de botella y evaluar el rendimiento de la aplicación. Algunas métricas importantes son los tiempos de respuesta, la cantidad de solicitudes procesadas, las tasas de error y el consumo de recursos. La información obtenida facilita la optimización de los flujos y ayuda a mantener la capacidad de respuesta del sistema \parencites{saeed2025reactive}{aiimtech2024understanding}.
+
+\subsection*{Mantener un aprendizaje y actualización continuos}
+Las herramientas y prácticas relacionadas con la programación reactiva evolucionan constantemente. Por esta razón, es recomendable consultar documentación, participar en comunidades técnicas y revisar recursos especializados. La actualización continua permite conocer nuevas soluciones y tomar decisiones más adecuadas durante el desarrollo \parencite{sousa2025java}.
+
+En conjunto, estas prácticas permiten aplicar los principios del Manifiesto Reactivo y favorecen la creación de aplicaciones más responsivas, resilientes, elásticas y capaces de adaptarse a diferentes condiciones de funcionamiento.
 
 % ===================== OBSERVACIONES Y COMENTARIOS =====================
 \section*{Observaciones y comentarios}
